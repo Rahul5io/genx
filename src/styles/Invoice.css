@@ -1,0 +1,116 @@
+/* Invoices.css */
+
+.invoice-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-container h2 {
+    text-align: left;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.invoice-container form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.invoice-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    display: block;
+}
+
+.invoice-container input,
+.invoice-container select,
+.invoice-container button {
+    line-height: 1.5;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Layout for the top section of the form */
+.top-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.line-items {
+    margin-top: 30px;
+}
+
+.line-item-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.line-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.line-item input[type="text"],
+.line-item input[type="number"] {
+    flex: 1;
+}
+
+.total-amount {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Button styles */
+.invoice-container button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #0077C5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 150px; /* Set a max-width for buttons */
+    justify-self: start; /* Align to the start of the grid */
+}
+
+.invoice-container button:hover {
+    background-color: #005A9C;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .invoice-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .invoice-container form {
+        grid-template-columns: 1fr;
+    }
+
+    .top-section {
+        grid-template-columns: 1fr;
+    }
+
+    .line-item-header,
+    .line-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
